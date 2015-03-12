@@ -1,6 +1,7 @@
 ##Create an Empty class named 'Person'
 
-
+class Person
+end 
 
 
 
@@ -9,44 +10,33 @@
 
 
 ##Define three properties on that class 'name','age','birthdate'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+class Person
+  def initialize(name, age, birthdate) 
+    @name = name
+    @age = age
+    @birthdate = birthdate   
+  end 
+end 
 
 
 
 
 ##Define 'methods' that allow you to access and set all three of those properties, Do not use attribute accessor
-=begin
+
+  def birthday  
+    puts 'Happy birthday'  
+  end  
+  
+  def display  
+    puts "Hello, my name is #{@name}. My birthday is #{@birthdate} and I will be #{@age}."  
+  end  
 
 
-
-
-
-
-
-
-
-
-=end
 
 
 
 ##Explain what calling Person.new does
-=begin
+it creates a new object
 
 
 
@@ -62,6 +52,12 @@
 
 ##Create an initializer method that allows you do Person.new 'Amy Smith' , which initializes the  Person's name property
 
+class Person
+  def initialize name
+    @first_name = "Amy"
+    @last_name = "Smith"
+  end
+end
 
 
 
@@ -73,7 +69,7 @@
 
 
 ##Write a method that outputs the value of the self keyword to the console
-
+puts p.first_name + p.last_name
 
 
 
@@ -85,24 +81,17 @@
 
 
 ##Explain in as much detail as possible what self refers to and what it means in the grand scheme of things
-=begin
+
+It's a receiver.method you can use to define methods on a specific objects.
 
 
 
 
 
-
-
-
-
-
-
-=end
 
 ##Explain what object instantiation means:
 =begin
-
-
+An object instance is created from a class through the a process called instantiation. In Ruby this takes place through the Class method new.
 
 
 
@@ -148,7 +137,7 @@ end
 #Explain in detail what a method is
 
 =begin
-
+A method is a set of expressions that returns a value
 
 
 
@@ -175,7 +164,15 @@ class PersonB
 end
 
 =begin
+Class methods are prefixed by self, or the class name, followed by a period
 
+this is a class method:
+ def self.name
+    @name
+  end
+
+
+  An instance method 
 
 
 
